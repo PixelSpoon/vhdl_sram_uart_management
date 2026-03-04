@@ -1,0 +1,7 @@
+-These codes were written in VHDL (1993 ver.) for sram management in DE2-115 FPGA board and all entities are designed to to be used seperately. RS232 is used for communication protocol####
+-sram_debug_top entity is the top entity for connecting all components in the project. Was used for debugging.#
+-uart_pull component takes the data from uart and adds up the data into 32 floating numbers. ready_32bit is set to 1 once a data is ready.#
+-sram manager takes the data and writes it to the sram(seperated to 16+16 bit 2 adresses), as the new data is ready it writes to the next adresses (max data is set to 28x28[783], can be changed) #
+-uart tx is a component when a data arrives, it seperate the bites for uart communication and sends the data via uart.#
+-the last data that arrives is seen in hex displayer for debugging purposes.#
+-matrix_28x28_pull does pull the data with python to see the data in pc#
